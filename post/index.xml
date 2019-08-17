@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://example.org/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Aug 2019 07:07:09 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First</title>
+      <link>http://example.org/post/first/</link>
+      <pubDate>Thu, 15 Aug 2019 07:07:09 +0800</pubDate>
+      
+      <guid>http://example.org/post/first/</guid>
+      <description>Test for Hugo.
+This is my first article in Hugo website.
+I want to get famillar with its function, usages and style.
+It seems very simplyness and beautiful, currently.
+I like it!
+Looking forward to start my road of writing!</description>
+    </item>
+    
+  </channel>
+</rss>
