@@ -6,9 +6,24 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 15 Aug 2019 07:07:09 +0800</lastBuildDate>
     
 	<atom:link href="http://doublequeens.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>First</title>
+      <link>http://doublequeens.github.io/post/first/</link>
+      <pubDate>Thu, 15 Aug 2019 07:07:09 +0800</pubDate>
+      
+      <guid>http://doublequeens.github.io/post/first/</guid>
+      <description>Test for Hugo.
+This is my first article in Hugo website.
+I want to get famillar with its function, usages and style.
+It seems very simplyness and beautiful, currently.
+I like it!
+Looking forward to start my road of writing!</description>
+    </item>
     
   </channel>
 </rss>
