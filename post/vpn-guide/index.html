@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>First - Coding &amp; Wirting</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Double-Queen" /><meta name="description" content="这两天被lantern莫名其妙的失效折磨的死去活来的，网速也时好时坏，让我萌生了自己搭建一个vpn的想法，看了些经验贴后感觉也不是特别困难，" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/vpn-guide/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="First" />
+<meta property="og:description" content="这两天被lantern莫名其妙的失效折磨的死去活来的，网速也时好时坏，让我萌生了自己搭建一个vpn的想法，看了些经验贴后感觉也不是特别困难，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/vpn-guide/" />
+<meta property="article:published_time" content="2019-08-15T07:07:09+08:00" />
+<meta property="article:modified_time" content="2019-08-15T07:07:09+08:00" />
+<meta itemprop="name" content="First">
+<meta itemprop="description" content="这两天被lantern莫名其妙的失效折磨的死去活来的，网速也时好时坏，让我萌生了自己搭建一个vpn的想法，看了些经验贴后感觉也不是特别困难，">
+
+
+<meta itemprop="datePublished" content="2019-08-15T07:07:09&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-15T07:07:09&#43;08:00" />
+<meta itemprop="wordCount" content="2798">
+
+
+
+<meta itemprop="keywords" content="vpn," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="First"/>
+<meta name="twitter:description" content="这两天被lantern莫名其妙的失效折磨的死去活来的，网速也时好时坏，让我萌生了自己搭建一个vpn的想法，看了些经验贴后感觉也不是特别困难，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Double Queens</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/zh/">
+        <li class="mobile-menu-item">ZH</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Double Queens</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/">ZH</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">First</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 15089-09-86 </span>
+        <div class="post-category">
+            <a href="/categories/tools/"> Tools </a>
+            </div>
+          <span class="more-meta"> 2798 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#第一步-选择vps服务商">第一步，选择vps服务商。</a></li>
+<li><a href="#第二步-搭建服务器">第二步，搭建服务器。</a>
+<ul>
+<li><a href="#1-选择机房">1. 选择机房</a></li>
+<li><a href="#2-选择服务器类型">2. 选择服务器类型</a></li>
+<li><a href="#3-额外特色">3. 额外特色</a></li>
+<li><a href="#4-startup-script">4. Startup Script</a></li>
+<li><a href="#5-ssh-keys">5. SSH keys</a></li>
+</ul></li>
+<li><a href="#第三步-在服务器端配置shadowsocks-server版本">第三步，在服务器端配置shadowsocks server版本</a></li>
+<li><a href="#第四步-在本地配置shadowsocks">第四步，在本地配置shadowsocks</a></li>
+<li><a href="#第五步-tcp-fast-open">第五步， TCP Fast Open</a></li>
+<li><a href="#第六步-应用bbr加速器">第六步 应用BBR加速器</a>
+<ul>
+<li><a href="#安装-bbr">安装 BBR</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>这两天被lantern莫名其妙的失效折磨的死去活来的，网速也时好时坏，让我萌生了自己搭建一个vpn的想法，看了些经验贴后感觉也不是特别困难，因此，今天就动手搭建了自己的vpn，运行结果果然爽的一比呀，网速杠杠的！在搭建中也遇到了一些问题，以此文做个总结。</p>
+
+<h2 id="第一步-选择vps服务商">第一步，选择vps服务商。</h2>
+
+<p>VPS，指Virtual Private Server 虚拟专用服务器，我们随后的操作就是利用这个境外服务器来作为我们的vpn，进而实现科学上网的目的。</p>
+
+<p>看了好些经验贴，看到大多数人用的是vultr和搬瓦工这两个vps服务商。两者评价差不多，性价比也差不多，vultr评价似乎更高一些，因此我最终选了vultr，我选的套餐是：Linux centOS服务器，$5一个月，1000G流量，单核CPU，1G内存，25G的硬盘。我感觉是够用了，还有更便宜的$2.5一个月的。</p>
+
+<p>补充一点，vultr在注册登陆后，会直接进入Billing页面，先让你给你账户充至少$10，支持支付宝、PayPal等，充值成功后才可以部署服务器，相关费用直接从你账户里扣，也算合理了，可以接受。</p>
+
+<h2 id="第二步-搭建服务器">第二步，搭建服务器。</h2>
+
+<h3 id="1-选择机房">1. 选择机房</h3>
+
+<p>充值后就可以直接部署服务器了，会让你选择服务器地址（国家、城市之类），这时你可以到这个网页看下<a href="https://www.vultrvps.com/test-server">各地机房测试数据</a>，里面有全国各个城市到vultr各机房网络速度的近期报告，你可以根据你的位置选择一个近期最快、最稳定安全的。我选择的机房是<strong>硅谷</strong>。</p>
+
+<h3 id="2-选择服务器类型">2. 选择服务器类型</h3>
+
+<p>选好机房后就选择服务器类别和大小（价钱），我是centOS 7 &amp; $5</p>
+
+<h3 id="3-额外特色">3. 额外特色</h3>
+
+<p>我只选了 <strong>Enable IPv6</strong>，其余为空</p>
+
+<h3 id="4-startup-script">4. Startup Script</h3>
+
+<p>我未添加，为空</p>
+
+<h3 id="5-ssh-keys">5. SSH keys</h3>
+
+<p>这里要添加一个SSH keys，作用是随后㐓通过ssh在本地连接上远程的服务器，然后可以在本地的终端上配置相关的参数。</p>
+
+<p>首先，需要你在本地生成你设备的SSH key，我是mac，因此我介绍的是mac的操作步骤，Windows的可以看这个帮助文档：<a href="https://www.vultr.com/docs/how-do-i-generate-ssh-keys/">How do I generate my SSH keys?</a>
+- 第一步，在你终端上run <code>ssh-keygen -t rsa</code>
+- 第二步，在系统询问你想把文件保存在哪儿时，直接按enter键跳过
+- 第三步，填入一个passphrase，任意英文就行，这个在之后ssh登陆服务器时会要求你输入，很重要。
+- 第四步，Run <code>cat ~/.ssh/id_rsa.pub</code>，你可以看到ssh key的内容，复制，随后会用
+- 第五步，复制上一步那个文件，以防ssh key丢失
+- 第六步，到vultr上<a href="https://my.vultr.com/sshkeys页面，选择添加SSH">https://my.vultr.com/sshkeys页面，选择添加SSH</a> key （Add SSH Key）,然后键入一个名字，再把第四步复制的SSH Key粘贴，点击添加SSH Key,完成！</p>
+
+<h2 id="第三步-在服务器端配置shadowsocks-server版本">第三步，在服务器端配置shadowsocks server版本</h2>
+
+<p>如果你是mac可以直接通过终端连接vps，如果是Windows的话需要借助第三方工具，可以找下其他帖子。</p>
+
+<p>首先，在你的vultr服务器页面复制你的服务器IP地址，然后打开你的终端，输入 <code>ssh root@你的服务器IP地址</code>，回车。</p>
+
+<p>如果你的终端页面返回了一连串提示，如下图，那说明你的IP地址没问题，没有被墙，可以放心使用，你选择yes，然后会让你输入一个<strong>passphrase</strong>，就是配置SSH Key时你设置的，输入后你就会看到你已经和服务器连接成功了！
+<img src="http://upload-images.jianshu.io/upload_images/9485-feb03131904f6d2b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>如果你的终端页面长时间没反应，然后最终返回的是 <code>ssh: connect to host 128.199.244.xxx port 22: Operation timed out</code>，十有八九你的IP被墙了，建议把这个服务器删掉重新再部署一个新的服务器，换个IP再试下，我换了第三个才成功。我整个过程在这一步卡了最长时间，因为之前一直连接失败后我没想到可能是IP本身问题，我一直以为是我配置问题，在那儿捣鼓了好长时间，最终才明白可能是IP本身问题，大家可以借鉴一下。</p>
+
+<h2 id="第四步-在本地配置shadowsocks">第四步，在本地配置shadowsocks</h2>
+
+<p>上一步完毕后，你就可以在本地终端配置你的服务器了，这样有两个好处：第一，vultr上虽然也会给你提供一个网页终端供你操作配置，但是很糟糕，我发现它上面的centOS服务器，在终端无法粘贴复制，也敲不出通配符&rdquo;|&ldquo;,这样的话，随后的所有命令你都得一个一个的敲，非常非常累，因为后面代码中会有很多网址之类的，敲起来很麻烦，另外，没有 | 符号，更是闹心呀，命令都敲不全。第二，本地终端你自己应该都配置过一遍了，用起来更顺手、方便，粘贴复制什么也无障碍。所以还是推荐大家通过ssh 进行连接，然后在本地配置。</p>
+
+<p>这一步，主要有三条命令，每次执行一条，主要目的是在你服务器上安装shadowsocks server版：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+chmod +x shadowsocks.sh
+./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</pre></td></tr></table>
+</div>
+</div>
+<p>执行过程中，系统会提示你手动输入一些参数，除了shadowsocks密码那一项，其他的你可以直接回车跳过去，这样那些参数就是默认值。</p>
+
+<p>最后一条结束后，你会看到你服务器的各种信息，如下图，根据这些信息你也就可以直接配置你的vpn了！：
+<img src="http://upload-images.jianshu.io/upload_images/9485-84aebc2e1c3121f3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>根据上面的信息，你可以根据自己设备类型，安装相应的shadowssocks 客户端，然后在<strong>服务器设置</strong>选项创建新的服务器，然后填入上面的ip地址、端口、密码等信息即可。</p>
+
+<p>填写完毕后，你就可以科学上网了！！</p>
+
+<h2 id="第五步-tcp-fast-open">第五步， TCP Fast Open</h2>
+
+<p>实际上只要具备上述四个信息，你就可以在自己的任意设备上进行登录使用了。但是为了更好的连接速度，你还需要多做几步。</p>
+
+<p>首先是打开 TCP Fast Open，输入以下命令，意为用 nano 这个编辑器打开一个文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">nano /etc/rc.local</pre></td></tr></table>
+</div>
+</div>
+<p>你的「终端」会刷新一下，出现下图。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/9485-6b0e39200a9cf603.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>别慌张，它就是个文本编辑器。用方向键把光标移到最末端，粘贴下面这一行内容，然后按 Ctrl + X 退出。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen</pre></td></tr></table>
+</div>
+</div>
+<p>输入“Y”并回车确认退出。</p>
+
+<p>然后依法炮制，输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">nano /etc/sysctl.conf</pre></td></tr></table>
+</div>
+</div>
+<p>在文末加上下面的内容，保存退出。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">net.ipv4.tcp_fastopen = 3</pre></td></tr></table>
+</div>
+</div>
+<p>再打开一个 Shadowsocks 配置文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">nano /etc/shadowsocks.json</pre></td></tr></table>
+</div>
+</div>
+<p>把其中 &ldquo;fast_open&rdquo; 一项的 false 替换成 true。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&#34;fast_open&#34;:true</pre></td></tr></table>
+</div>
+</div>
+<p>最后，输入以下命令重启 Shadowsocks。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/etc/init.d/shadowsocks restart</pre></td></tr></table>
+</div>
+</div>
+<h2 id="第六步-应用bbr加速器">第六步 应用BBR加速器</h2>
+
+<p><del>在上面部署完毕vpn后，其实还可以通过<strong>锐速加速器</strong>这个软件来对你的vpn的网速进行优化。</del></p>
+
+<p>TCP BBR 是 Google 于 2016 年发布的，一种避免网络拥塞的算法。目的是要尽量跑满带宽, 并且尽可能避免排队的情况。<br />
+实际使用下来，BBR 的速度提升效果并不比「锐速」（据说已倒闭）、kcptun（多倍发包耗流量）等差。而且 BBR 已植入 Linux 4.9+ 版本的内核中，服务器开启后就能有显著的效果提升。</p>
+
+<h3 id="安装-bbr">安装 BBR</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ssh root@&lt;host&gt;
+
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</pre></td></tr></table>
+</div>
+</div>
+<p>按任意键开始安装，安装需要一段时间，等待一会即可。<br />
+安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。<br />
+重新使用 SSH 登录 VPS，这时 BBR 应该已经开启了。你可以使用以下两行命令验证一下。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">uname -r
+lsmod | grep bbr</pre></td></tr></table>
+</div>
+</div>
+<p>如果输出的内核版本为 4.9 以上版本，且返回值有 tcp_bbr 模块的话，说明 bbr 已启动。</p>
+
+<p>具体可以参照下面两个帖子：</p>
+
+<p><a href="https://zoomyale.com/2016/vultr_and_ss">科学上网的终极姿势：在 Vultr VPS 上搭建 Shadowsocks
+</a>最后一部分：<strong>开启BBR</strong></p>
+
+<p><a href="https://www.wn789.com/4689.html">如何修改CentOS6、CentOS7内核支持安装锐速的内核
+</a>，这个帖子解决centOS server内核和锐速不匹配时，更换server内核的操作方法</p>
+
+<p>至此，就可以特别舒服的科学上网了！！</p>
+
+<p>Enjoy It！！</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Double-Queen</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        15089-09-86
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/vpn/">vpn</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/happy/unhappy/">
+            <span class="next-text nav-default">Happy every day</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'opentalk';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <span id="/post/vpn-guide/" class="leancloud_visitors" data-flag-title="First">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'W5TXPOtyxi7gnfc9xTuV5mxn-gzGzoHsz',
+        appKey: 'p1wc64QUKoxYamrRw5VBI4jS',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '不想说点什么吗，亲？',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Double-Queen</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,14 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Even - A super concise theme for Hugo</title>
-    <link>http://doublequeens.github.io/tags/</link>
-    <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
+    <title>Tags on Coding &amp; Wirting</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Coding &amp; Wirting</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 15 Aug 2019 07:07:09 +0800</lastBuildDate>
     
-	<atom:link href="http://doublequeens.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/tags/test/</link>
+      <pubDate>Thu, 15 Aug 2019 07:07:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpn</title>
+      <link>http://localhost:1313/tags/vpn/</link>
+      <pubDate>Thu, 15 Aug 2019 07:07:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zh</title>
+      <link>http://localhost:1313/tags/zh/</link>
+      <pubDate>Thu, 15 Aug 2019 07:07:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/zh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poem</title>
+      <link>http://localhost:1313/tags/poem/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/poem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pre-Tang</title>
+      <link>http://localhost:1313/tags/pre-tang/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/pre-tang/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
