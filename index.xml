@@ -29,10 +29,10 @@ Thanks!</description>
     
     <item>
       <title>Happy every day</title>
-      <link>http://localhost:1313/post/happy/unhappy/</link>
+      <link>http://localhost:1313/post/unhappy/</link>
       <pubDate>Thu, 15 Aug 2019 07:07:09 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/happy/unhappy/</guid>
+      <guid>http://localhost:1313/post/unhappy/</guid>
       <description>Happy test for function of nested content
   Steve Francia   Every Day {{ template &amp;ldquo;_internal/disqus.html&amp;rdquo; . }}</description>
     </item>
