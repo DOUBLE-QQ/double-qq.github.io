@@ -23,7 +23,7 @@
       
       <guid>http://localhost:1313/post/unhappy/</guid>
       <description>Happy test for function of nested content
-  Steve Francia   Every Day {{ template &amp;ldquo;_internal/disqus.html&amp;rdquo; . }}</description>
+  Steve Francia   Every Day </description>
     </item>
     
     <item>
