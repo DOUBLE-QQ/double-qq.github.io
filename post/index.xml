@@ -16,24 +16,5 @@
       <description>这两天被lantern莫名其妙的失效折磨的死去活来的，网速也时好时坏，让我萌生了自己搭建一个vpn的想法，看了些经验贴后感觉也不是特别困难，</description>
     </item>
     
-    <item>
-      <title>Happy every day</title>
-      <link>http://localhost:1313/post/unhappy/</link>
-      <pubDate>Thu, 15 Aug 2019 07:07:09 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/unhappy/</guid>
-      <description>Happy test for function of nested content
-  Steve Francia   Every Day </description>
-    </item>
-    
-    <item>
-      <title>《长恨歌》</title>
-      <link>http://localhost:1313/post/poem/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/poem/</guid>
-      <description>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难</description>
-    </item>
-    
   </channel>
 </rss>
